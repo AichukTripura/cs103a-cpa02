@@ -1,0 +1,13 @@
+<div class = "d-flex flex-column wrap">
+    <% for (course of courses) {%>
+        <div class = "border-secondary p-3 m-1 border  w-25">
+            <a href="/schedule/remove/<%= course._id %>">X</a>
+            <%= course['subject'] %>
+            <%= course.coursenum %>
+            <%= course.term %><br>
+            <h3><%= course.name %></h3><br>
+            <%= course.description %><br>
+            <%= "Lec time: "+course.strTimes %>
+        </div>
+        <% }%>
+</div>
